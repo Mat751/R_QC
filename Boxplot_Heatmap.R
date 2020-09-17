@@ -3,10 +3,10 @@ library(gplots)
 library(RColorBrewer)
 
 source("F:/nuovi/funzioni/VETTORE_COLORI.R")
-source("F:/nuovi/funzioni/HEATMAP3.R")
+source("F:/nuovi/funzioni/HEATMAP_3.R")
 
 pdf("")
-par(mfrow(2,1))
+par(mfrow=c(2,1))
 
 boxplot(exprs(eset),
         range=0,
@@ -15,7 +15,7 @@ boxplot(exprs(eset),
         main="",
         xlab="",
         xaxt="n")
-mtext(at = 1:ncol(eset),side=3,las=2,cex=.7,text=colnames(eset))
+mtext(at = 1:ncol(eset),side=3,las=2,cex=.7,text=paste0(colnames(eset)," -"),adj=1)
 
 dev.off()
 
