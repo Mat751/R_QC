@@ -15,7 +15,7 @@ boxplot(exprs(eset),
         main="",
         xlab="",
         xaxt="n")
-mtext(at = 1:ncol(eset),side=3,las=2,cex=.7,text=paste0(colnames(eset)," -"),adj=1)
+mtext(at = 1:ncol(eset),side=1,las=2,cex=.7,text=paste0(colnames(eset)," -"),adj=1)
 
 dev.off()
 
